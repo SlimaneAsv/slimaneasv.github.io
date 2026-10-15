@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Research projects by Slimane Alaoui Soulimani Valenti, including spatial omics, transcriptomics-driven tissue models, and piecewise sequences with dynamic thresholds.">
+  <meta name="theme-color" content="#f8f8f4">
+  <title>Projects | Slimane Alaoui Soulimani Valenti</title>
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="index.html" aria-label="Slimane — homepage"><span class="brand-mark" aria-hidden="true">S.</span><span>Slimane Alaoui</span></a>
+      <div class="nav-links"><a href="index.html">Home</a><a href="index.html#about">About</a><a href="projects.html" aria-current="page">Projects</a></div>
+      <a class="nav-cta" href="index.html">Back to home <span aria-hidden="true">↗</span></a>
+    </nav>
+  </header>
+  <main class="container">
+    <section class="page-intro" aria-labelledby="page-title">
+      <div class="eyebrow">Research & exploration</div>
+      <h1 id="page-title">Three projects.<br><span>Many questions.</span></h1>
+      <p>My current interests range from computational biology to the dynamics of recursive sequences. Here are the ideas, methods, and connections behind each project.</p>
+      <nav class="project-index" aria-label="Jump to a project">
+        <a href="#synthetic-spatial-omics">01 · Synthetic spatial omics ↘</a>
+        <a href="#transcriptomics-modeling">02 · Transcriptomics & tissue models ↘</a>
+        <a href="#piecewise-sequences">03 · Dynamic-threshold sequences ↘</a>
+      </nav>
+    </section>
+
+    <article class="detail" id="synthetic-spatial-omics" aria-labelledby="project-one-title">
+      <div class="detail-header">
+        <div class="detail-number" aria-hidden="true">01</div>
+        <div class="detail-content">
+          <div class="detail-meta">Spatial omics <span aria-hidden="true">/</span> Current project</div>
+          <h2 id="project-one-title">Creating synthetic spatial omics data</h2>
+          <p class="description">I am working on creating synthetic spatial omics data. This project is linked to <strong>Inria SIMBIOTX</strong>, a research team working on computational approaches to biological systems.</p>
+        </div>
+      </div>
+      <div class="detail-body">
+        <div class="detail-panel">
+          <h3>Related team & links</h3>
+          <p class="detail-note">Learn more about the research team associated with this project.</p>
+          <a class="resource-link" href="https://team.inria.fr/simbiotx/" target="_blank" rel="noopener noreferrer">Inria SIMBIOTX — official team website <span aria-hidden="true">↗</span></a>
+        </div>
+      </div>
+    </article>
+
+    <article class="detail" id="transcriptomics-modeling" aria-labelledby="project-two-title">
+      <div class="detail-header">
+        <div class="detail-number" aria-hidden="true">02</div>
+        <div class="detail-content">
+          <div class="detail-meta">Machine learning <span aria-hidden="true">/</span> Agent-based modeling</div>
+          <h2 id="project-two-title">From transcriptomics to tissue-level models</h2>
+          <p class="description">My project focuses on integrating transcriptomics data into <strong>agent-based tissue-level models</strong>. I use machine learning techniques, with <strong>GeoMx transcriptomics data</strong> as input, following a multi-stage pipeline.</p>
+        </div>
+      </div>
+      <div class="detail-body">
+        <div class="supervisor-row"><strong>Supervision</strong> Dr. Dirk Drasdo and Matteo Pedrazzi</div>
+        <div class="detail-panel">
+          <h3>The research pipeline</h3>
+          <p class="pipeline-label">GeoMx transcriptomics data is the starting input.</p>
+          <div class="pipeline" aria-label="cVAE, then GCN, then Boolean adjacency matrix, then MaBoSS">
+            <div class="pipeline-step"><small>STEP 01</small><strong>cVAE</strong></div>
+            <div class="pipeline-step"><small>STEP 02</small><strong>GCN</strong></div>
+            <div class="pipeline-step"><small>STEP 03</small><strong>Boolean adjacency matrix</strong></div>
+            <div class="pipeline-step"><small>STEP 04</small><strong>MaBoSS</strong></div>
+          </div>
+          <p class="math-remarks">cVAE = conditional variational autoencoder; GCN = graph convolutional network. The pipeline connects transcriptomic input to Boolean-model simulation with MaBoSS.</p>
+        </div>
+      </div>
+    </article>
+
+    <article class="detail" id="piecewise-sequences" aria-labelledby="project-three-title">
+      <div class="detail-header">
+        <div class="detail-number" aria-hidden="true">03</div>
+        <div class="detail-content">
+          <div class="detail-meta">Pure mathematics <span aria-hidden="true">/</span> Recursive dynamics</div>
+          <h2 id="project-three-title">Piecewise sequences with dynamic thresholds</h2>
+          <p class="description">I study piecewise recursive sequences with a moving threshold. Their evolution depends on the relationship between the current term and a threshold that itself changes over time.</p>
+        </div>
+      </div>
+      <div class="detail-body">
+        <div class="detail-panel">
+          <h3>The mathematical object</h3>
+          <div class="equation-wrap" role="img" aria-label="a sub n plus 1 equals f of a sub n when a sub n is less than or equal to c sub n, and g of a sub n when a sub n is greater than c sub n; c sub n plus 1 equals h of a sub n and c sub n">
+            <div class="equation-main"><span class="lhs">a<sub>n+1</sub> =</span><span class="big-brace" aria-hidden="true">{</span><div class="cases"><div><i>f</i>(a<sub>n</sub>) <span class="condition">if a<sub>n</sub> ≤ c<sub>n</sub></span></div><div><i>g</i>(a<sub>n</sub>) <span class="condition">if a<sub>n</sub> &gt; c<sub>n</sub></span></div></div></div>
+            <div class="equation-second"><i>c</i><sub>n+1</sub> = <i>h</i>(a<sub>n</sub>, c<sub>n</sub>)</div>
+          </div>
+          <p class="math-remarks">This is my favorite mathematical object. I'm not focused on one particular conjecture or problem; I explore these sequences simply for the love of the game.</p>
+        </div>
+        <a class="back-link" href="index.html">← Return to homepage</a>
+      </div>
+    </article>
+  </main>
+  <footer class="site-footer"><div class="footer-inner container"><div><strong>Slimane Alaoui Soulimani Valenti</strong><br>University of Toronto</div><div>Curiosity, computation & mathematics.</div><div><a href="index.html">Back to home ↗</a></div></div></footer>
+</body>
+</html>
