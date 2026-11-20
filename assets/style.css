@@ -1,0 +1,384 @@
+/* Source Serif 4, self-hosted (SIL Open Font License, see fonts/OFL.txt) */
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("fonts/source-serif-4-latin-400-normal.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("fonts/source-serif-4-latin-400-italic.woff2") format("woff2");
+  font-weight: 400;
+  font-style: italic;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("fonts/source-serif-4-latin-600-normal.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Source Serif 4";
+  src: url("fonts/source-serif-4-latin-600-italic.woff2") format("woff2");
+  font-weight: 600;
+  font-style: italic;
+  font-display: swap;
+}
+
+/* White and red. Change --red to retint the whole site. */
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --text: #161616;
+  --muted: #6e6e6e;
+  --rule: #e9e9e9;
+  --red: #c8102e;
+  --red-dark: #9a0c23;
+  --red-tint: #fdf4f5;
+  --red-line: #f2d3d8;
+  --link: var(--red);
+  --link-hover: var(--red-dark);
+  --code-bg: #f6f6f6;
+  --measure: 40rem;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+
+html {
+  -webkit-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  border-top: 4px solid var(--red);
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Source Serif 4", "Iowan Old Style", "Palatino Linotype", Georgia, serif;
+  font-size: 1.0625rem;
+  line-height: 1.6;
+  text-rendering: optimizeLegibility;
+}
+
+.wrap {
+  max-width: var(--measure);
+  margin: 0 auto;
+  padding: 3rem 1.25rem 3rem;
+}
+
+/* Links */
+a {
+  color: var(--link);
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.18em;
+  text-decoration-color: color-mix(in srgb, currentColor 35%, transparent);
+}
+a:hover {
+  color: var(--link-hover);
+  text-decoration-color: currentColor;
+}
+
+/* Header */
+.site-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 0.4rem 1.5rem;
+  padding-bottom: 1rem;
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--rule);
+}
+.site-name {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: var(--text);
+  text-decoration: none;
+}
+a.site-name:hover { color: var(--text); }
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1.1rem;
+}
+.site-header nav a {
+  color: var(--muted);
+  text-decoration: none;
+}
+.site-header nav a:hover { color: var(--text); }
+.site-header nav a[aria-current="page"] {
+  color: var(--red);
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.4em;
+}
+
+/* Text */
+p { margin: 0 0 1rem; }
+
+h1.page-title {
+  font-size: 1.6rem;
+  font-weight: 600;
+  line-height: 1.25;
+  margin: 0 0 0.5rem;
+}
+.lede { color: var(--muted); margin-bottom: 2rem; }
+
+h2 {
+  margin: 2.75rem 0 1.1rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+
+.meta, .empty { color: var(--muted); }
+
+/* Featured project (Dondarrion) */
+.feature {
+  margin: 2.25rem 0 2.5rem;
+  padding: 1.4rem 1.6rem 1.25rem;
+  background: var(--red-tint);
+  border: 1px solid var(--red-line);
+  border-left: 4px solid var(--red);
+  border-radius: 3px;
+}
+.feature-label {
+  margin: 0 0 0.2rem;
+  font-size: 0.78rem;
+  font-weight: 600;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--red);
+}
+h2.feature-title {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 600;
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.2;
+}
+.feature-title a {
+  color: var(--text);
+  text-decoration: none;
+}
+.feature-title a:hover { color: var(--red); }
+.feature-tagline {
+  margin: 0.3rem 0 0.9rem;
+  font-size: 1.1rem;
+  font-style: italic;
+}
+.feature-facts {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.75rem;
+  margin: 1.1rem 0;
+  padding: 0;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  color: var(--muted);
+}
+.feature-facts li {
+  padding-top: 0.55rem;
+  border-top: 2px solid var(--red);
+}
+.feature-facts strong {
+  display: block;
+  margin-bottom: 0.1rem;
+  color: var(--text);
+  font-size: 1rem;
+}
+.feature-cta { margin: 0; }
+.feature-cta a {
+  display: inline-block;
+  margin-right: 0.6rem;
+  padding: 0.35rem 0.85rem;
+  background: var(--red);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 3px;
+}
+.feature-cta a:hover { background: var(--red-dark); color: #fff; }
+.feature-cta .meta { font-size: 0.88rem; }
+
+/* Affiliation logos under the intro */
+.affiliations {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1rem 2.25rem;
+  margin-top: 1.75rem;
+}
+.affiliations:not(:has(img)) { display: none; }
+.affiliations img {
+  display: block;
+  height: 2.25rem;
+  width: auto;
+  max-width: 9rem;
+  object-fit: contain;
+}
+.empty { font-style: italic; }
+
+/* Intro on the home page */
+.intro {
+  display: flex;
+  align-items: flex-start;
+  gap: 1.75rem;
+}
+.intro-text { flex: 1; }
+.portrait {
+  flex-shrink: 0;
+  width: 10rem;
+  height: 10rem;
+  object-fit: cover;
+  border-radius: 3px;
+}
+
+/* Lists of things: research, talks, random, essays */
+.entries {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+.entries li {
+  display: grid;
+  grid-template-columns: 5.75rem 1fr;
+  gap: 0 1rem;
+  margin-bottom: 1.15rem;
+}
+.entries .when {
+  color: var(--muted);
+  font-size: 0.92rem;
+  font-variant-numeric: tabular-nums;
+  padding-top: 0.08rem;
+}
+.entries .title { font-weight: 600; }
+.entries .meta { font-size: 0.95rem; }
+.entries .note p {
+  margin: 0.15rem 0 0;
+}
+
+.links a { white-space: nowrap; }
+
+/* Art gallery: keeps each piece's own proportions */
+.gallery {
+  columns: 2 14rem;
+  column-gap: 1.5rem;
+}
+.gallery figure {
+  break-inside: avoid;
+  margin: 0 0 1.5rem;
+}
+.gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  background: var(--rule);
+}
+.gallery figcaption {
+  margin-top: 0.45rem;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: var(--muted);
+}
+.gallery figcaption .title {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* Essays */
+.essay-header { margin-bottom: 2rem; }
+.essay-header h1 {
+  font-size: 1.9rem;
+  font-weight: 600;
+  line-height: 1.2;
+  margin: 0 0 0.4rem;
+}
+.essay-header .meta { margin: 0; }
+.essay h2 {
+  font-size: 1.25rem;
+  letter-spacing: 0;
+  text-transform: none;
+  color: var(--text);
+  margin: 2.25rem 0 0.75rem;
+}
+.essay h3 {
+  font-size: 1.05rem;
+  margin: 1.75rem 0 0.5rem;
+}
+.essay img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 1.5rem auto;
+}
+.essay blockquote {
+  margin: 1.5rem 0;
+  padding-left: 1.1rem;
+  border-left: 2px solid var(--red);
+  color: var(--muted);
+}
+.essay hr {
+  border: 0;
+  border-top: 1px solid var(--rule);
+  margin: 2.5rem 0;
+}
+.essay .footnotes {
+  margin-top: 3rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.9rem;
+}
+.essay .back { margin-top: 3rem; }
+
+mjx-container[display="true"] { overflow-x: auto; overflow-y: hidden; }
+
+code, pre {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+  font-size: 0.86em;
+}
+code {
+  background: var(--code-bg);
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+}
+pre {
+  background: var(--code-bg);
+  padding: 0.9rem 1rem;
+  border-radius: 3px;
+  overflow-x: auto;
+  line-height: 1.45;
+}
+pre code { background: none; padding: 0; }
+
+/* Footer */
+.site-footer {
+  margin-top: 4rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--rule);
+  font-size: 0.85rem;
+  color: var(--muted);
+}
+
+/* Small screens */
+@media (max-width: 34rem) {
+  .wrap { padding-top: 2rem; }
+  .intro { flex-direction: column-reverse; gap: 1.25rem; }
+  .portrait { width: 7rem; height: 7rem; }
+  .entries li { grid-template-columns: 1fr; }
+  .entries .when { padding-top: 0; }
+  .feature { padding: 1.15rem 1.1rem 1.1rem; }
+  .feature-facts { grid-template-columns: 1fr; }
+  .feature-cta .meta { display: block; margin-top: 0.6rem; }
+}
