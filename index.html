@@ -1,0 +1,105 @@
+---
+layout: default
+title: Home
+---
+<section class="intro">
+  <div class="intro-text">
+    <p>I'm an undergraduate at the <a href="https://www.utoronto.ca">University of Toronto</a> (Victoria College), doing a double major in Mathematics and Cognitive Science. I'm currently working on synthetic fMRI to study unusual brain geometries.</p>
+    <p>Previously, I did machine learning research at <a href="https://team.inria.fr/simbiotx/">Inria Saclay</a> and at <a href="https://pleias.ai">Pleias</a> in Paris. I also have a background in startups: I built a text-to-speech startup, which I've since exited, and I'm now working on <a href="https://dondarrion.com">Dondarrion</a>.</p>
+  </div>
+  <img class="portrait" src="{{ '/pictures/profile.jpg' | relative_url }}" alt="Slimane Alaoui Soulimani Valenti" width="160" height="160" onerror="this.remove()">
+</section>
+
+<!-- Logos: save them as pictures/logos/uoft.png, inria.png and pleias.png.
+     Any that are missing are simply hidden. -->
+<div class="affiliations">
+  <a href="https://www.utoronto.ca" title="University of Toronto"><img src="{{ '/pictures/logos/uoft.png' | relative_url }}" alt="University of Toronto" onerror="this.parentNode.remove()"></a>
+  <a href="https://team.inria.fr/simbiotx/" title="Inria"><img src="{{ '/pictures/logos/inria.png' | relative_url }}" alt="Inria" onerror="this.parentNode.remove()"></a>
+  <a href="https://pleias.ai" title="Pleias"><img src="{{ '/pictures/logos/pleias.png' | relative_url }}" alt="Pleias" onerror="this.parentNode.remove()"></a>
+</div>
+
+<section class="feature" aria-labelledby="dondarrion">
+  <p class="feature-label">Currently building</p>
+  <h2 class="feature-title" id="dondarrion"><a href="https://dondarrion.com">Dondarrion</a></h2>
+  <p class="feature-tagline">Precise and fast synthetic AI polling for the exact population you want.</p>
+  <p>Define a population (a single ward, renters under 35, people who voted a certain way last time) and put a question to it. Dondarrion returns an estimate with its base, interval and Census frame, with no fieldwork. It can also test campaigns, ads and headlines on that population, side by side.</p>
+  <ul class="feature-facts">
+    <li><strong>Seconds</strong> instead of the six weeks a field poll takes</li>
+    <li><strong>Any group</strong> even ones phone polls can't reach</li>
+    <li><strong>Census-anchored</strong> bias-corrected MRP</li>
+  </ul>
+  <p class="feature-cta"><a href="https://dondarrion.com">Visit dondarrion.com&nbsp;→</a> <span class="meta">Private beta for governments, public agencies and research institutions.</span></p>
+</section>
+
+<p>On paper my work looks scattered: dynamical systems, cancer research, legal AI benchmarking, imaging, cognitive science, machine learning. To me it is one question asked in different places: <em>how do objects interact, and what comes out of those interactions?</em> A sequence pushing against a threshold that moves with it, cells signalling to their neighbours in a tissue, regions of a brain folded into an unusual shape. The objects change; the question doesn't.</p>
+
+<h2>Research</h2>
+<ul class="entries">
+  <li>
+    <span class="when">Now</span>
+    <div>
+      <span class="title">Synthetic fMRI and unusual brain geometries</span>
+      <div class="note"><p>Generating synthetic fMRI data to study brains whose geometry departs from the usual.</p></div>
+    </div>
+  </li>
+  <li>
+    <span class="when">2026</span>
+    <div>
+      <a class="title" href="https://team.inria.fr/simbiotx/">Spatial transcriptomics</a> <span class="meta">· Inria Saclay, SIMBIOTX</span>
+      <div class="note"><p>A machine learning pipeline (cVAE → GCN → Boolean network → MaBoSS) that brings GeoMx spatial transcriptomics data into agent-based, tissue-level models. With Dirk Drasdo and Matteo Pedrazzi.</p></div>
+    </div>
+  </li>
+  <li>
+    <span class="when">2024–25</span>
+    <div>
+      <span class="title">Dynamical systems</span> <span class="meta">· University of Toronto</span>
+      <div class="note"><p>Discrete-time systems that switch rules at adaptive thresholds: local stability criteria, and a “common-limit constraint” on regime-switching orbits. This became the preprint below.</p></div>
+    </div>
+  </li>
+  <li>
+    <span class="when">2025</span>
+    <div>
+      <span class="title">Machine learning</span> <span class="meta">· Pleias, Paris</span>
+      <div class="note"><p>Reinforcement learning (GRPO) on the Jean Zay supercomputer, with models released on <a href="https://huggingface.co/PleIAs">Hugging Face</a>; also RAG, data pipelines and benchmarking.</p></div>
+    </div>
+  </li>
+</ul>
+
+<h2>Preprints</h2>
+<ul class="entries">
+  <li>
+    <span class="when">2025</span>
+    <div>
+      <a class="title" href="https://arxiv.org/abs/2507.19605">Piecewise Recursive Sequences with Adaptive Thresholds: Boundary Convergence and Applications</a>
+      <div class="note"><p class="meta">Sole author · arXiv:2507.19605 [math.DS] · under review</p></div>
+    </div>
+  </li>
+</ul>
+
+<h2>Talks</h2>
+<p>I've grown fond of teaching. So far, two colloquia at the University of Toronto Math Union:</p>
+<ul class="entries">
+  <li>
+    <span class="when">Sep 2026</span>
+    <div>
+      <a class="title" href="https://seminars.math.utoronto.ca/pages/seminars?case=view_talk&amp;talk_id=1790287200-1789433500-198">“We're Finished”: A Retrospective on AI in Mathematics</a>
+      <div class="note"><p>From ChatGPT in 2022 to Erdős problems, IMO results and solved conjectures: what AI has done for mathematical research, and where it still falls short.</p></div>
+    </div>
+  </li>
+  <li>
+    <span class="when">Jan 2026</span>
+    <div>
+      <a class="title" href="https://seminars.math.toronto.edu/pages/seminars?case=view_talk&amp;talk_id=1769729400-1769046693-992">The Small Horseshoe: An Introduction to Hyperbolic Chaos</a>
+      <div class="note"><p>Smale's horseshoe map as a way into hyperbolicity, invariant sets and the geometry behind chaos, for first-year students.</p></div>
+    </div>
+  </li>
+</ul>
+
+<h2>Elsewhere</h2>
+<p class="links">
+  <a href="mailto:slimane.alaoui@mail.utoronto.ca">slimane.alaoui@mail.utoronto.ca</a>
+  <span aria-hidden="true">·</span> <a href="https://scholar.google.com/citations?user=lpkU7VMAAAAJ">Google Scholar</a>
+  <span aria-hidden="true">·</span> <a href="https://huggingface.co/SlimaneAsv">Hugging Face</a>
+  <span aria-hidden="true">·</span> <a href="https://github.com/SlimaneAsv">GitHub</a>
+  <span aria-hidden="true">·</span> <a href="{{ site.cv | relative_url }}">CV (PDF)</a>
+</p>

@@ -1,0 +1,43 @@
+---
+layout: default
+title: Art & Essays
+permalink: /art-and-essays/
+---
+<h1 class="page-title">Art &amp; Essays</h1>
+
+<h2>Essays</h2>
+{% assign essays = site.essays | sort: "date" | reverse %}
+{% if essays.size > 0 %}
+<ul class="entries">
+  {% for essay in essays %}
+  <li>
+    <span class="when">{{ essay.date | date: "%b %Y" }}</span>
+    <div>
+      <a class="title" href="{{ essay.url | relative_url }}">{{ essay.title }}</a>
+      {% if essay.description %}<div class="note"><p>{{ essay.description }}</p></div>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="empty">Nothing here yet.</p>
+{% endif %}
+
+<h2>Art</h2>
+{% if site.data.art and site.data.art.size > 0 %}
+<div class="gallery">
+  {% for piece in site.data.art %}
+  {% assign src = "/pictures/" | append: piece.image | relative_url %}
+  <figure>
+    <a href="{{ src }}"><img src="{{ src }}" alt="{{ piece.alt | default: piece.title | escape }}" loading="lazy"></a>
+    <figcaption>
+      <span class="title">{{ piece.title }}</span>{% if piece.year %}, {{ piece.year }}{% endif %}
+      {% if piece.medium %}<br>{{ piece.medium }}{% endif %}
+      {% if piece.note %}<br>{{ piece.note }}{% endif %}
+    </figcaption>
+  </figure>
+  {% endfor %}
+</div>
+{% else %}
+<p class="empty">Nothing here yet.</p>
+{% endif %}

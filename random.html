@@ -1,0 +1,29 @@
+---
+layout: default
+title: Random
+permalink: /random/
+---
+<h1 class="page-title">Random</h1>
+<p class="lede">Things that don't fit anywhere else.</p>
+
+{% if site.data.random and site.data.random.size > 0 %}
+<ul class="entries">
+  {% for item in site.data.random %}
+  <li>
+    <span class="when">{{ item.date }}</span>
+    <div>
+      {% if item.url %}
+        {% if item.url contains "://" %}{% assign href = item.url %}{% else %}{% assign href = item.url | relative_url %}{% endif %}
+        <a class="title" href="{{ href }}">{{ item.title }}</a>
+      {% else %}
+        <span class="title">{{ item.title }}</span>
+      {% endif %}
+      {% if item.where %}<span class="meta">· {{ item.where }}</span>{% endif %}
+      {% if item.note %}<div class="note">{{ item.note | markdownify }}</div>{% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="empty">Nothing here yet.</p>
+{% endif %}

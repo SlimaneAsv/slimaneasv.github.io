@@ -1,0 +1,31 @@
+title: Slimane Alaoui Soulimani Valenti
+description: Mathematics and Cognitive Science at the University of Toronto. Dynamical systems, spatial transcriptomics, synthetic fMRI, startups.
+url: "https://slimaneasv.github.io"
+baseurl: ""
+timezone: America/Toronto
+
+# Path to the CV used in the top navigation. Change it here if you rename the file.
+cv: /files/Resume_Slimane_ASV.pdf
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+  math_engine: mathjax
+
+collections:
+  essays:
+    output: true
+    permalink: /essays/:name/
+
+defaults:
+  - scope:
+      path: ""
+      type: essays
+    values:
+      layout: essay
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
