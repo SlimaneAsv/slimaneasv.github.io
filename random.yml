@@ -1,0 +1,19 @@
+# Entries for the Random page, newest first.
+#
+# Fields (only title is required):
+#   date:  free text, e.g. "Nov 2025" or "Winter 2026"
+#   title: what it is
+#   url:   a full link (https://...) or a path in this repo (/files/slides.pdf)
+#   where: where it lives, shown after the title
+#   note:  a sentence or two; Markdown links work
+
+- date: Winter 2026
+  title: Directed Reading Program in mathematics
+  where: University of Toronto
+  note: An introduction to microlocal analysis, read under the supervision of Heyang Song.
+
+- date: Nov 2025
+  title: Gemini-3 Benchmarkathon
+  where: Hugging Face blog
+  url: https://huggingface.co/blog/joelniklaus/gemini-3-benchmarkathon
+  note: With the HuggingLegal community, we put Gemini 3 Pro through a set of legal benchmarks. I contributed the section on hearsay.

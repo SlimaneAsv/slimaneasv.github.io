@@ -1,0 +1,9 @@
+# Pieces for the Art section of the Art & Essays page, newest first.
+# Put the image file in pictures/, then add an entry below (remove the leading "# ").
+#
+# - image: my-painting.jpg     # file name inside pictures/
+#   title: Untitled
+#   year: 2026                 # optional
+#   medium: Oil on canvas      # optional
+#   note: One line about it.   # optional
+#   alt: What the image shows, for screen readers (optional, defaults to the title)
