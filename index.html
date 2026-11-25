@@ -2,11 +2,12 @@
 layout: default
 title: Home
 ---
+
 <section class="intro">
   <div class="intro-text">
     <p>contact : slimane.alaoui@mail.utoronto.ca</p>
-    <p>I'm an undergraduate at the <a href="https://www.utoronto.ca">University of Toronto</a> (Victoria College), doing a double major in Mathematics and Cognitive Science. I'm currently working on synthetic fMRI to study unusual brain geometries.</p>
-    <p>Previously, I did machine learning research at <a href="https://team.inria.fr/simbiotx/">Inria Saclay</a> and at <a href="https://pleias.ai">Pleias</a> in Paris. I also have a background in startups: I built a text-to-speech startup, which I've since exited, and I'm now working on <a href="https://dondarrion.com">Dondarrion</a>.</p>
+    <p>I'm an undergraduate at the <a href="https://www.utoronto.ca">University of Toronto</a> (Victoria College), doing a double major in Mathematics and Cognitive Science. I'm currently working on generating biologically realistic synthetic fMRI data from brain geometry.</p>
+    <p>Previously, I did machine learning research at <a href="https://team.inria.fr/simbiotx/">Inria Saclay</a> and at <a href="https://pleias.ai">Pleias</a> in Paris. I also have a background in startups: I built a text-to-speech startup, which I've since exited, and I'm involved in <a href="https://dondarrion.com">Dondarrion</a>.</p>
   </div>
   <img class="portrait" src="{{ '/pictures/profile.jpg' | relative_url }}" alt="Slimane Alaoui Soulimani Valenti" width="160" height="160" onerror="this.remove()">
 </section>
@@ -19,43 +20,55 @@ title: Home
   <a href="https://pleias.ai" title="Pleias"><img src="{{ '/pictures/logos/pleias.png' | relative_url }}" alt="Pleias" onerror="this.parentNode.remove()"></a>
 </div>
 
-<section class="feature" aria-labelledby="dondarrion">
+<section class="feature" aria-labelledby="synthetic-fmri">
   <p class="feature-label">Currently building</p>
-  <h2 class="feature-title" id="dondarrion"><a href="https://dondarrion.com">Dondarrion</a></h2>
-  <p class="feature-tagline">Synthetic AI polling for the exact population you want.</p>
-  <p>Define a population (a single ward, renters under 35, people who voted a certain way last time, or even the intersection of that) and put a question to it. Dondarrion returns an estimate with its base, interval and Census frame, with no fieldwork. It can also test campaigns, ads and headlines on that population, side by side.</p>
+  <h2 class="feature-title" id="synthetic-fmri">Synthetic fMRI &amp; Brain Geometry</h2>
+  <p class="feature-tagline">Generating biologically realistic brain activity from geometry.</p>
+
+  <p>fMRI scans are expensive to collect, slow to share because they contain sensitive medical data, and often too scarce to train modern AI systems effectively. Synthetic data could help fill that gap.</p>
+
+  <p>The goal of this project is to generate biologically realistic synthetic brain-activity scans using brain geometry as the starting point, with a particular interest in unusual or underrepresented brain geometries.</p>
+
+  <p>I'm working on constructing a bijective map between fMRI signals and their spectral representations in the geometric eigenmode basis of the brain. Using this representation, I plan to train two types of generative models on thousands of scans from publicly available datasets: a conditional variational autoencoder (cVAE) and a diffusion model (the same family of methods behind modern AI image generators).</p>
+
+  <p>The idea is to learn how brain geometry relates to functional activity and ultimately generate biologically realistic patterns of brain activity conditioned on a given brain geometry.</p>
+
   <ul class="feature-facts">
-    <li><strong>Seconds</strong> instead of the six weeks a field poll takes</li>
-    <li><strong>Any group</strong> even ones phone polls can't reach</li>
-    <li><strong>Census-anchored</strong> bias-corrected MRP</li>
+    <li><strong>Spectral geometry</strong> — representing brain activity through geometric eigenmodes</li>
+    <li><strong>Bijective mapping</strong> — constructing an invertible transformation between fMRI signals and their spectral representations</li>
+    <li><strong>Generative modelling</strong> — geometry-conditioned variational autoencoders and diffusion models</li>
+    <li><strong>Synthetic data</strong> — generating realistic fMRI scans for rare and underrepresented brain geometries</li>
   </ul>
-  <p class="feature-cta"><a href="https://dondarrion.com">Visit dondarrion.com&nbsp;→</a> <span class="meta">Private beta for governments, public agencies and research institutions.</span></p>
+
+  <p class="feature-cta">
+    <span class="meta">Ongoing research · University of Toronto</span>
+  </p>
 </section>
 
-<p>On paper my work looks scattered (and it lowk is).
+<p>On paper my work looks scattered (and it lowk is).</p>
 
-However, to me it is one question asked in different places: <em>how do objects interact?</em>
+<p>However, to me it is one question asked in different places: <em>how do objects interact?</em></p>
 
 <h2>Research</h2>
 <ul class="entries">
   <li>
     <span class="when">Now</span>
     <div>
-      <span class="title">Synthetic fMRI and unusual brain geometries</span>
-      <div class="note"><p>Generating synthetic fMRI data to study brains whose geometry departs from the usual.</p></div>
+      <span class="title">Synthetic fMRI and unusual brain geometries</span> <span class="meta">· University of Toronto</span>
+      <div class="note"><p>Developing a bijective spectral representation of fMRI signals using geometric eigenmodes, followed by geometry-conditioned variational autoencoders and diffusion models to generate biologically realistic synthetic brain activity, with a particular interest in unusual brain geometries.</p></div>
     </div>
   </li>
   <li>
     <span class="when">2026</span>
     <div>
-      <a class="title" href="https://team.inria.fr/simbiotx/">Spatial transcriptomics Phenotype Prediction</a> <span class="meta">· Inria Saclay, SIMBIOTX</span>
+      <a class="title" href="https://team.inria.fr/simbiotx/">Spatial Transcriptomics Phenotype Prediction</a> <span class="meta">· Inria Saclay, SIMBIOTX</span>
       <div class="note"><p>A machine learning pipeline (cVAE → GCN → Boolean network → MaBoSS) that brings GeoMx spatial transcriptomics data into agent-based, tissue-level models. With Dr. Dirk Drasdo and Matteo Pedrazzi.</p></div>
     </div>
   </li>
   <li>
-     <span class="when">2026</span>
+    <span class="when">2026</span>
     <div>
-      <a class="title" href="https://team.inria.fr/simbiotx/">Synthetic Spatial transcriptomics</a> <span class="meta">· Inria Saclay, SIMBIOTX</span>
+      <a class="title" href="https://team.inria.fr/simbiotx/">Synthetic Spatial Transcriptomics</a> <span class="meta">· Inria Saclay, SIMBIOTX</span>
       <div class="note"><p>"Love of the game" project supervised by Matteo Pedrazzi. Creating biologically coherent synthetic spatial transcriptomics data.</p></div>
     </div>
   </li>
@@ -88,6 +101,7 @@ However, to me it is one question asked in different places: <em>how do objects 
 
 <h2>Talks</h2>
 <p>I've grown fond of teaching. So far, two colloquia at the University of Toronto Math Union:</p>
+
 <ul class="entries">
   <li>
     <span class="when">Sep 2026</span>
@@ -104,6 +118,7 @@ However, to me it is one question asked in different places: <em>how do objects 
     </div>
   </li>
 </ul>
+
 <p><strong>Important:</strong> I'm currently involved in several projects, although some of them receive only minor contributions from me at this stage, such as Dondarrion and the mathematics preprint.</p>
 
 <p>I expect to release the results of my Inria internship before the end of 2026, the synthetic spatial transcriptomics project by February 2027, and Dondarrion in summer 2027.</p>
@@ -111,6 +126,7 @@ However, to me it is one question asked in different places: <em>how do objects 
 <p>As for the synthetic fMRI project, I don't have a clear timeline yet, as its progress largely depends on my supervisor's feedback and guidance.</p>
 
 <p>Regarding the mathematics paper, given the recent explosion of AI-generated journal submissions, I can only hope to receive a final decision (either rejection or acceptance) in 2027, although I suspect even that timeline is unrealistic.</p>
+
 <h2>Elsewhere</h2>
 <p class="links">
   <a href="mailto:slimane.alaoui@mail.utoronto.ca">slimane.alaoui@mail.utoronto.ca</a>
