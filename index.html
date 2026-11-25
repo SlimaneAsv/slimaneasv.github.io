@@ -12,34 +12,26 @@ title: Home
   <img class="portrait" src="{{ '/pictures/profile.jpg' | relative_url }}" alt="Slimane Alaoui Soulimani Valenti" width="160" height="160" onerror="this.remove()">
 </section>
 
-<!-- Logos: save them as pictures/logos/uoft.png, inria.png and pleias.png.
-     Any that are missing are simply hidden. -->
-<div class="affiliations">
-  <a href="https://www.utoronto.ca" title="University of Toronto"><img src="{{ '/pictures/logos/uoft.png' | relative_url }}" alt="University of Toronto" onerror="this.parentNode.remove()"></a>
-  <a href="https://team.inria.fr/simbiotx/" title="Inria"><img src="{{ '/pictures/logos/inria.png' | relative_url }}" alt="Inria" onerror="this.parentNode.remove()"></a>
-  <a href="https://pleias.ai" title="Pleias"><img src="{{ '/pictures/logos/pleias.png' | relative_url }}" alt="Pleias" onerror="this.parentNode.remove()"></a>
-</div>
 
 <section class="feature" aria-labelledby="synthetic-fmri">
   <p class="feature-label">Currently building</p>
   <h2 class="feature-title" id="synthetic-fmri">Synthetic fMRI &amp; Brain Geometry</h2>
   <p class="feature-tagline">Generating biologically realistic brain activity from geometry.</p>
 
-  <p>fMRI scans are expensive to collect, slow to share because they contain sensitive medical data, and often too scarce to train modern AI systems effectively. Synthetic data could help fill that gap.</p>
+  <p>I'm working on constructing a bijective map between fMRI signals and their spectral representations in the geometric eigenmode basis of the brain. Then, I plan to train two types of generative models on thousands of scans from publicly available datasets: a conditional variational autoencoder (cVAE) and a diffusion model (the same family of methods behind modern AI image generators).</p>
 
-  <p>The goal of this project is to generate biologically realistic synthetic brain-activity scans using brain geometry as the starting point, with a particular interest in unusual or underrepresented brain geometries.</p>
+  <p>Ideally, it would help to learn how brain geometry relates to functional activity and generate biologically realistic patterns of brain activity.</p>
 
-  <p>I'm working on constructing a bijective map between fMRI signals and their spectral representations in the geometric eigenmode basis of the brain. Using this representation, I plan to train two types of generative models on thousands of scans from publicly available datasets: a conditional variational autoencoder (cVAE) and a diffusion model (the same family of methods behind modern AI image generators).</p>
+<ul class="feature-facts">
+  <li><strong>Geometric eigenmodes</strong> - Break brain activity into natural patterns set by the brain's own shape, so neighbouring regions stay connected.</li>
+  <li><strong>cVAE</strong> - A generative model that learns to compress brain activity and create new examples for a given brain shape.</li>
+  <li><strong>Diffusion models</strong> - The method behind modern image generators, adapted to build realistic brain activity step by step from random noise.</li>
 
-  <p>The idea is to learn how brain geometry relates to functional activity and ultimately generate biologically realistic patterns of brain activity conditioned on a given brain geometry.</p>
-
-  <ul class="feature-facts">
-    <li><strong>Spectral geometry</strong> — representing brain activity through geometric eigenmodes</li>
-    <li><strong>Bijective mapping</strong> — constructing an invertible transformation between fMRI signals and their spectral representations</li>
-    <li><strong>Generative modelling</strong> — geometry-conditioned variational autoencoders and diffusion models</li>
-    <li><strong>Synthetic data</strong> — generating realistic fMRI scans for rare and underrepresented brain geometries</li>
-  </ul>
-
+  <li><strong>Brain-shape conditioning</strong> - Each synthetic scan is tailored to one specific individual's brain shape.</li>
+  <li><strong>Physics-based baseline</strong> - A model of how activity spreads across the brain's surface, used as a benchmark to beat.</li>
+  <li><strong>Validation</strong> - Synthetic scans are compared with real recordings to check they behave like real brains.</li>
+  <li><strong>Privacy checks</strong> - Tests confirm the synthetic scans don't reproduce anyone from the training data.</li>
+</ul>
   <p class="feature-cta">
     <span class="meta">Ongoing research · University of Toronto</span>
   </p>
